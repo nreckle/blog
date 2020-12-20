@@ -11,6 +11,16 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 # Go To Public folder
 cd public
 
+if [ -n "$GITHUB_AUTH_SECRET" ]
+then
+    touch ~/.git-credentials
+    chmod 0600 ~/.git-credentials
+    echo $GITHUB_AUTH_SECRET > ~/.git-credentials
+    git config credential.helper store
+    git config user.email "username-blog-bot@users.noreply.github.com"
+    git config user.name "username-blog-bot"
+fi
+
 # Add changes to git.
 git add .
 
