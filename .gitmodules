@@ -1,0 +1,7 @@
+[submodule "themes/hugo-clean-theme"]
+	path = themes/hugo-clean-theme
+	url = https://github.com/xdtianyu/hugo-clean-theme.git
+[submodule "public"]
+	path = public
+	url = https://github.com/nreckle/nreckle.github.io.git
+	branch = main

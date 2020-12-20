@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<main role="main">
+    <div class="container mt-3">
+        <article class="markdown-body card">
+            <h1><a href="{{ .Permalink }}" class="text-dark"i title="{{ .Title }}">{{ .Title }}</a></h1>
+            <div class="row ml-0">
+                <p class="text-secondary mr-2 mb-2">发布于：{{ partial "date.html" . }}</p>
+                {{ partial "categories.html" . }}
+                {{ partial "tags.html" . }}
+            </div>
+            <div class="mb-3 d-md-none"></div>
+            {{ partial "toc.html" . }}
+            {{- with .Content -}}
+            {{ partial "anchor.html" . }}
+            {{- end -}}
+        </article>
+        {{ partial "isso.html" . }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

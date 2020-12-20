@@ -1,0 +1,4 @@
+baseURL = "http://nreckle.github.io/"
+languageCode = "en-us"
+title = "Log"
+theme = "hugo-clean-theme"

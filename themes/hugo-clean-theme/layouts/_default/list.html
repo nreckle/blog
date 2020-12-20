@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<main role="main">
+    <div class="container mt-3">
+        {{ range .Data.Pages }}
+        {{ if eq .Type "post"}}
+        {{ partial "post_item.html" . }}
+        {{ end }}
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

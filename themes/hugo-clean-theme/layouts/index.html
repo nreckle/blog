@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<main role="main">
+    <div class="container mt-3">
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+        {{ range $paginator.Pages }}
+        {{ partial "post_item.html" . }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

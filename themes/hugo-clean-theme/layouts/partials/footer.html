@@ -1,0 +1,18 @@
+<footer>
+    <div class="container d-print-none">
+        <div class="text-secondary text-center mt-3">Powered by
+            <a href="https://gohugo.io" title="Hugo" target="_blank"i rel="noopener">Hugo</a> | Theme - <a href="https://github.com/xdtianyu/hugo-clean-theme" title="Clean" target="_blank" rel="noopener">Clean</a>
+        </div>
+        <div class="navbar-text text-secondary text-center d-block">© 2018
+            <a title="{{ .Site.Title }}" href="/" target="_blank">{{ .Site.Title }}</a>
+            {{ partial "rss.html" .}}
+        </div></div>
+</footer>
+
+{{ partial "svg.html" .}}
+
+{{ partial "js.html" .}}
+
+{{ partial "analytics.html" .}}
+</body>
+</html>
