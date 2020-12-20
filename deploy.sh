@@ -11,7 +11,7 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 # Go To Public folder
 cd public
 
-if [ -n "$GITHUB_AUTH_SECRET" ]
+if [ -n "$GITHUB_TOKEN" ]
 then
     touch ~/.git-credentials
     chmod 0600 ~/.git-credentials
