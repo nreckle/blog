@@ -17,8 +17,8 @@ then
     chmod 0600 ~/.git-credentials
     echo $GITHUB_AUTH_SECRET > ~/.git-credentials
     git config credential.helper store
-    git config user.email "username-blog-bot@users.noreply.github.com"
-    git config user.name "username-blog-bot"
+    git config user.email "nreckle@users.noreply.github.com"
+    git config user.name "nreckle"
 fi
 
 # Add changes to git.
