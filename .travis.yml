@@ -6,10 +6,14 @@ script:
   - hugo
 
 deploy:
-    provider: script
-    script: bash ./deploy.sh
+    provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     keep_history: true
     on:
       branch: main
+    local_dir: public
+    repo: nreckle/nreckle.github.io
+    target_branch: main
+    email: deploy@travis-ci.org
+    name: deployment-bot
