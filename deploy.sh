@@ -5,31 +5,17 @@ set -e
 
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
-# Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
-# Go To Public folder
 cd public
 
-if [ -n "$GITHUB_TOKEN" ]
-then
-    touch ~/.git-credentials
-    chmod 0600 ~/.git-credentials
-    echo $GITHUB_AUTH_SECRET > ~/.git-credentials
-    git config credential.helper store
-    git config user.email "nreckle@users.noreply.github.com"
-    git config user.name "nreckle"
-fi
-
-# Add changes to git.
 git add .
 
-# Commit changes.
+
 msg="Rebuilding site $(date)"
 if [ -n "$*" ]; then
 	msg="$*"
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
-git push origin main
+git push https://$USER_NAME:$PASSWORD@github.com/nreckle/nreckle.github.io.git --all
