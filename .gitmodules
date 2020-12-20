@@ -3,5 +3,5 @@
 	url = https://github.com/xdtianyu/hugo-clean-theme.git
 [submodule "public"]
 	path = public
-	url = https://github.com/nreckle/nreckle.github.io.git
+	url = git@github.com:nreckle/nreckle.github.io.git
 	branch = main
