@@ -1,6 +1,5 @@
 ---
-date: 2019-05-28
-type: post
+title: "归档"
+type: "section"
 layout: "archive"
 ---
-
