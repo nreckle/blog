@@ -1,3 +1,4 @@
 baseURL = "http://nreckle.github.io/"
 languageCode = "en-us"
+DefaultContentLanguage = "zh-cn"
 theme = "hugo-clean-theme"
