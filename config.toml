@@ -17,15 +17,15 @@ I am a Software Engineer with a strong foundation in computer science and a pass
 # Main menu pages
 [[params.menu]]
 name = "home"
-url = "/"
+url = "/blog/"
 
 [[params.menu]]
 name = "posts"
-url = "/posts"
+url = "/blog/posts"
 
 [[params.menu]]
 name = "about"
-url = "/about"
+url = "/blog/about"
 
 [markup]
   [markup.highlight]
