@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Ben Blog'
 theme="typo"
 
+[params]
+  author = "Ben"
+  description = "A blog about various topics."
+  customCSS = ["css/custom.css"]
+
 [menu]
   [[menu.main]]
     identifier = "about"
