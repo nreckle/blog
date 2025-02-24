@@ -1,4 +1,4 @@
-baseURL = 'https://nreckle.github.io/'
+baseURL = 'https://nreckle.github.io/blog/'
 languageCode = 'en-us'
 title = 'Ben Blog'
 theme="typo"
@@ -19,3 +19,12 @@ theme="typo"
     name = "Posts"
     url = "/posts/"
     weight = 2
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
