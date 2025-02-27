@@ -1,0 +1,184 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width"><link rel=icon type=image/ico href=https://nreckle.github.io/blog//favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://nreckle.github.io/blog//favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://nreckle.github.io/blog//favicon-32x32.png><link rel=icon type=image/png sizes=192x192 href=https://nreckle.github.io/blog//android-chrome-192x192.png><link rel=apple-touch-icon sizes=180x180 href=https://nreckle.github.io/blog//apple-touch-icon.png><meta name=description content><title>Launcher_default_workspace | Ben Blog
+</title><link rel=canonical href=https://nreckle.github.io/blog/posts/launcher_default_workspace/><meta property="og:url" content="https://nreckle.github.io/blog/posts/launcher_default_workspace/"><meta property="og:site_name" content="Ben Blog"><meta property="og:title" content="Launcher_default_workspace"><meta property="og:description" content='Launcher3 default workspace # 1. config file # default_workspace_4x5.xml
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3"> <!-- Hotseat (We use the screen as the position of the item in the hotseat) --> <!-- Dialer, Messaging, Browser, Camera --> <resolve launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0" > <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" /> <favorite launcher:uri="#Intent;action=android.intent.action.DIAL;end" /> <favorite launcher:uri="tel:123" /> <favorite launcher:uri="#Intent;action=android.intent.action.CALL_BUTTON;end" /> </resolve> <resolve launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0" > <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end" /> <favorite launcher:uri="sms:" /> <favorite launcher:uri="smsto:" /> <favorite launcher:uri="mms:" /> <favorite launcher:uri="mmsto:" /> </resolve> attrs.xml'><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-02-28T00:32:54+08:00"><meta property="article:modified_time" content="2025-02-28T00:32:54+08:00"><link rel=stylesheet href=/blog/assets/combined.min.db1f6bdda2e5a4d5c9a316aa295aaeba691b0d6154397bbb6787fea95b273e6a.css media=all></head><body class=auto><div class=content><header><div class=header><h1 class=header-title><a href=https://nreckle.github.io/blog/>Ben Blog</a></h1><div class=flex><p class=small><a href=/blog/>/home</a></p><p class=small><a href=/blog/posts>/posts</a></p><p class=small><a href=/blog/about>/about</a></p></div></div></header><main class=main><div><div class=single-intro-container><h1 class=single-title>Launcher_default_workspace</h1><p class=single-readtime><time datetime=2025-02-28T00:32:54+08:00>February 28, 2025</time></p></div><div class=single-content><h1 class=heading id=launcher3-default-workspace>Launcher3 default workspace
+<a class=anchor href=#launcher3-default-workspace>#</a></h1><h2 class=heading id=1-config-file>1. config file
+<a class=anchor href=#1-config-file>#</a></h2><p><strong>default_workspace_4x5.xml</strong></p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#f92672>&lt;favorites</span> <span style=color:#a6e22e>xmlns:launcher=</span><span style=color:#e6db74>&#34;http://schemas.android.com/apk/res-auto/com.android.launcher3&#34;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>&lt;!-- Hotseat (We use the screen as the position of the item in the hotseat) --&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>&lt;!-- Dialer, Messaging, Browser, Camera --&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;resolve</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:container=</span><span style=color:#e6db74>&#34;-101&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:screen=</span><span style=color:#e6db74>&#34;0&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:x=</span><span style=color:#e6db74>&#34;0&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:y=</span><span style=color:#e6db74>&#34;0&#34;</span> <span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>launcher:className=</span><span style=color:#e6db74>&#34;com.android.contacts.activities.TwelveKeyDialer&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>launcher:packageName=</span><span style=color:#e6db74>&#34;com.android.contacts&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;#Intent;action=android.intent.action.DIAL;end&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;tel:123&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;#Intent;action=android.intent.action.CALL_BUTTON;end&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;/resolve&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;resolve</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:container=</span><span style=color:#e6db74>&#34;-101&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:screen=</span><span style=color:#e6db74>&#34;1&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:x=</span><span style=color:#e6db74>&#34;1&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>launcher:y=</span><span style=color:#e6db74>&#34;0&#34;</span> <span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;sms:&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;smsto:&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;mms:&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;favorite</span> <span style=color:#a6e22e>launcher:uri=</span><span style=color:#e6db74>&#34;mmsto:&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;/resolve&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>attrs.xml</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#75715e>&lt;!-- XML attributes used by default_workspace.xml --&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;declare-styleable</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;Favorite&#34;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;className&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;packageName&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;container&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;screen&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;x&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;y&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;spanX&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;spanY&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;icon&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;reference&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;title&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;attr</span> <span style=color:#a6e22e>name=</span><span style=color:#e6db74>&#34;uri&#34;</span> <span style=color:#a6e22e>format=</span><span style=color:#e6db74>&#34;string&#34;</span> <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/declare-styleable&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><ol><li><p>className (format=&ldquo;string&rdquo;)</p><ul><li><p>Purpose: Specifies the fully qualified class name of the activity or component that should be launched when the favorite item is tapped.</p></li><li><p>Example: com.google.android.apps.messaging.ui.ConversationListActivity</p></li><li><p>Usage: This is used to identify the specific activity within an app that should be launched.</p></li></ul></li><li><p>packageName (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the package name of the app that the favorite item belongs to.</li><li>Example: com.google.android.apps.messaging</li><li>Usage: This is used to identify the app that the favorite item is associated with.</li></ul></li><li><p>container (format=&ldquo;string&rdquo;)</p><ul><li><p>Purpose: Specifies the container where the favorite item is located.
+Values:</p><ul><li><p><strong>-100: Represents the user&rsquo;s desktop.</strong></p></li><li><p><strong>-101: Represents the Hotseat.</strong></p></li><li><p><strong>Other negative values: Represent folders.</strong></p></li></ul></li><li><p>Usage: This is used to determine whether the item is on the home screen, in the Hotseat, or in a folder.</p></li></ul></li><li><p>screen (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the screen number where the favorite item is located.
+Values:
+- <strong>-1: Represents the Hotseat.</strong>
+- <strong>0, 1, 2, etc.: Represent the different home screen pages.</strong></li><li>Usage: This is used to determine which home screen page or the Hotseat the item is on.</li></ul></li><li><p>x (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the horizontal position (column) of the favorite item within its container (e.g., on the home screen grid or in the Hotseat).</li><li>Usage: This is used to determine the item&rsquo;s horizontal position.</li></ul></li><li><p>y (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the vertical position (row) of the favorite item within its container (e.g., on the home screen grid).</li><li>Usage: This is used to determine the item&rsquo;s vertical position.</li></ul></li><li><p>spanX (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the horizontal span (width) of the favorite item, in terms of grid cells.</li><li>Usage: This is used for widgets that occupy more than one grid cell horizontally.</li></ul></li><li><p>spanY (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the vertical span (height) of the favorite item, in terms of grid cells.</li><li>Usage: This is used for widgets that occupy more than one grid cell vertically.</li></ul></li><li><p>icon (format=&ldquo;reference&rdquo;)</p><ul><li>Purpose: Specifies a drawable resource to be used as the icon for the favorite item.</li><li>Example: @drawable/my_app_icon</li><li>Usage: This is used to override the default icon for an app or shortcut.</li></ul></li><li><p>title (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies the title or label to be displayed for the favorite item.</li><li>Usage: This is used to override the default app name or to provide a custom label for a shortcut.</li></ul></li><li><p>uri (format=&ldquo;string&rdquo;)</p><ul><li>Purpose: Specifies a URI (Uniform Resource Identifier) associated with the favorite item.</li><li>Usage: This is used for shortcuts that launch specific content or actions, such as a web page or a contact.</li></ul></li></ol><h2 class=heading id=2-defaultlayoutparser---autoinstallslayout>2. DefaultLayoutParser -> AutoInstallsLayout
+<a class=anchor href=#2-defaultlayoutparser---autoinstallslayout>#</a></h2><blockquote><p>Here&rsquo;s a breakdown of the flow, from the start of the parsing process to the creation of the default workspace:</p><ol><li><strong>Launcher Initialization:</strong></li></ol><ul><li>Launcher.onCreate(): The Launcher activity&rsquo;s onCreate() method is called when the launcher starts.</li><li>LauncherModel: The Launcher creates an instance of LauncherModel. The LauncherModel is responsible for loading the data that will be displayed on the home screen.</li><li>startLoader(): The LauncherModel starts the loading process by calling startLoader().</li></ul><ol start=2><li><strong>Loading the Workspace:</strong></li></ol><ul><li>loadWorkspace(): The LauncherModel calls loadWorkspace() to start loading the workspace.</li><li>loadDefaultFavorites(): Inside loadWorkspace(), the loadDefaultFavorites() method is called. This is where the parsing of default_workspace.xml begins.</li></ul><ol start=3><li><strong>Parsing default_workspace.xml:</strong></li></ol><ul><li>XmlResourceParser: An XmlResourceParser is created to read the default_workspace.xml file.</li><li>Resources.getXml(): The Resources.getXml() method is used to get the XmlResourceParser for the default_workspace.xml resource.</li><li>XmlPullParser: The XmlResourceParser implements the XmlPullParser interface, which allows for efficient parsing of XML data.</li><li>Event-Based Parsing: The XmlPullParser uses an event-based parsing model. It generates events (e.g., START_TAG, END_TAG, TEXT) as it reads the XML data.</li><li>Looping Through Events: The code loops through the events generated by the XmlPullParser.</li><li>START_TAG: When a START_TAG event is encountered, the code checks the tag name.</li><li>: If the tag name is , the code continues to the next event.</li><li>: If the tag name is , the code extracts the attributes from the tag.</li><li>Extracting Attributes: The code uses methods like getAttributeValue() to extract the values of the attributes (e.g., packageName, className, container, screen, x, y, etc.).</li><li>ItemInfo: An ItemInfo object is created to store the information about the favorite item.</li><li>ShortcutInfo: If the item is an app icon or shortcut, a ShortcutInfo object is created.</li><li>AppWidgetProviderInfo: If the item is a widget, an AppWidgetProviderInfo object is created.
+FolderInfo: If the item is a folder, a FolderInfo object is created.</li><li>Adding to List: The ItemInfo object is added to a list of items to be added to the workspace.</li><li>: If the tag name is , the code extracts the attributes for the widget.</li><li>: If the tag name is , the code extracts the attributes for the folder.</li><li>END_TAG: When an END_TAG event is encountered, the code checks if it&rsquo;s the end of a</li><li>, , or tag.</li><li>END_DOCUMENT: When an END_DOCUMENT event is encountered, the parsing is complete.</li></ul><ol start=4><li><strong>Applying the Default Workspace:</strong></li></ol><ul><li><strong>applyDefaultWorkspaceItems():</strong> After parsing, the applyDefaultWorkspaceItems() method is called.</li><li>**Adding Items to Database: **The applyDefaultWorkspaceItems() method adds the parsed items to the launcher&rsquo;s database (LauncherProvider).</li><li>ContentValues: ContentValues objects are used to store the data for each item before inserting it into the database.</li><li>LauncherSettings.Favorites: The LauncherSettings.Favorites table is used to store the information about the items.</li><li>ContentResolver.insert(): The ContentResolver.insert() method is used to insert the data into the database.</li><li>bindWorkspace(): The bindWorkspace() method is called to bind the data to the UI.</li></ul><ol start=5><li><strong>Binding to the UI:</strong></li></ol><ul><li>Workspace: The Workspace view is responsible for displaying the home screen.</li><li>CellLayout: The Workspace uses CellLayout to arrange the items in a grid.</li><li>addItem(): The Workspace&rsquo;s addItem() method is called to add each item to the UI.</li><li>ShortcutAndWidgetContainer: The ShortcutAndWidgetContainer is used to hold the items.</li><li>addViewToCellLayout(): The addViewToCellLayout() method is used to add the item to the CellLayout.</li></ul></blockquote><blockquote><pre tabindex=0><code>START
+  |
+  v
+[Launcher.onCreate()]  {Launcher Activity Starts}
+  |
+  v
+[Create LauncherModel]
+  |
+  v
+[LauncherModel.startLoader()]
+  |
+  v
+[LauncherModel.loadWorkspace()]
+  |
+  v
+[LauncherModel.loadDefaultFavorites()]
+  |
+  v
+[Create XmlResourceParser] {default_workspace.xml}
+  |
+  v
+[Get XmlPullParser]
+  |
+  v
+[Loop Through XmlPullParser Events]
+  |
+  v
+(Event Type?)
+  |
+  +--&gt;(START_TAG)
+  |    |
+  |    v
+  |  (Tag Name?)
+  |    |
+  |    +--&gt;(&lt;favorites&gt;) --&gt; [Continue to Next Event]
+  |    |
+  |    +--&gt;(&lt;favorite&gt;) --&gt; [Extract Attributes (packageName, className, container, screen, x, y, etc.)]
+  |    |                  |
+  |    |                  v
+  |    |                  [Create ShortcutInfo]
+  |    |                  |
+  |    |                  v
+  |    |                  [Add ShortcutInfo to Item List]
+  |    |
+  |    +--&gt;(&lt;appwidget&gt;) --&gt; [Extract Attributes (packageName, className, spanX, spanY, etc.)]
+  |    |                  |
+  |    |                  v
+  |    |                  [Create AppWidgetProviderInfo]
+  |    |                  |
+  |    |                  v
+  |    |                  [Add AppWidgetProviderInfo to Item List]
+  |    |
+  |    +--&gt;(&lt;folder&gt;) --&gt; [Extract Attributes (title, etc.)]
+  |                       |
+  |                       v
+  |                       [Create FolderInfo]
+  |                       |
+  |                       v
+  |                       [Add FolderInfo to Item List]
+  |
+  +--&gt;(END_TAG)
+  |    |
+  |    v
+  |  (Tag Name?)
+  |    |
+  |    +--&gt;(&lt;favorite&gt; or &lt;appwidget&gt; or &lt;folder&gt;) --&gt; [Continue to Next Event]
+  |
+  +--&gt;(END_DOCUMENT)
+  |    |
+  |    v
+  |  [LauncherModel.applyDefaultWorkspaceItems()]
+  |    |
+  |    v
+  |  [Add Items to Database (LauncherProvider)] {LauncherSettings.Favorites}
+  |    |
+  |    v
+  |  [LauncherModel.bindWorkspace()]
+  |    |
+  |    v
+  |  [Workspace.addItem()]
+  |    |
+  |    v
+  |  [Add Item to CellLayout]
+  |    |
+  |    v
+END
+</code></pre></blockquote></div><div class=back-to-top><a href=#top>back to top</a></div></div></main></div><footer><p>Powered by
+<a href=https://gohugo.io/>Hugo</a>
+and
+<a href=https://github.com/tomfran/typo>tomfran/typo</a></p></footer></body><script src=/blog/js/theme-switch.js></script><script defer src=/blog/js/copy-code.js></script></html>
